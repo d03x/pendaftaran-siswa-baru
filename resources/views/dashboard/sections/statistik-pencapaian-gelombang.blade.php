@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row  lg-gap-0">
     <div class="col-md-6">
         <div class="card shadow-sm border-0">
             <div class="card-body">
@@ -32,6 +32,17 @@
                         </div>
                     </div> <!-- /.progress-group -->
                 </div> <!-- /.col -->
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card card-outline card-info shadow-sm border-0">
+            <div class="card-header">
+                Statistik Jalur Pendaftaran
+            </div>
+            <div class="card-body">
+                <div id="char2t"></div>
+
             </div>
         </div>
     </div>

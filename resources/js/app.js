@@ -2,7 +2,7 @@ import {OverlayScrollbars} from 'overlayscrollbars';  // Import OverlayScrollbar
 import 'overlayscrollbars/overlayscrollbars.css';  // Jangan lupa untuk mengimpor stylesheet OverlayScrollbars
 import NiceSelect from 'nice-select2';
 import './bootstrap';
-
+import "./pages/dashboard"
 
 
 // Overlay Scrollbar

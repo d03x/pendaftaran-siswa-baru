@@ -1,4 +1,5 @@
 <x-base-layout bodyClass="layout-fixed sidebar-expand-lg bg-body-tertiary">
+    
     <!-- begin:app-wrapper -->
     <div class="app-wrapper">
         <x-dashboard.top-nav />
@@ -13,7 +14,7 @@
                             </h3>
                         </div>
                         <div class="col-sm-6">
-                            <x-dashboard.bread-crumb/>
+                            <x-dashboard.bread-crumb />
                         </div>
                     </div> <!--end::Row-->
                 </div> <!--end::Container-->

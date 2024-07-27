@@ -16,6 +16,8 @@
 <body @class($bodyClass)>
     {{ $slot }}
     <x-base-script />
+    @stack('scripts')
+    @yield('scripts')
 </body>
 
 </html>
