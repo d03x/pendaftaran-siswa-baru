@@ -3,11 +3,16 @@
     <div class="sidebar-wrapper">
         <nav class="mt-2"> <!--begin::Sidebar Menu-->
             <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
-                <li class="nav-item"> <a href="./peserta/index.html" class="nav-link"> <i class="nav-icon bi bi-speedometer"></i>
-                        <p>Untuk Peserta PPDB</p>
+                <li class="nav-item"> <a href="{{ route('dashboard.index') }}" class="nav-link"> <i class="nav-icon bi bi-speedometer"></i>
+                        <p>
+                            Dashboard
+                        </p>
                     </a> </li>
-                <li class="nav-item"> <a href="./admin/index.html" class="nav-link active"> <i class="nav-icon bi bi-speedometer"></i>
-                        <p>Untuk ADMIN</p>
+                    <li class="nav-item"> <a href="#" class="nav-link"> <i class="nav-icon bi bi-journal-bookmark"></i>
+                        <p>
+                            Pendaftar Baru
+                            <span class="nav-badge badge text-bg-primary me-3">19</span>
+                        </p>
                     </a> </li>
                 <li class="nav-item"> <a href="#" class="nav-link"> <i class="nav-icon bi bi-database-gear"></i>
                         <p>
@@ -16,6 +21,9 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <li class="nav-item"> <a href="./widgets/info-box.html" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
+                            <p>Data Sekolah</p>
+                        </a> </li>
                         <li class="nav-item"> <a href="./widgets/small-box.html" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
                                 <p>Jurusan</p>
                             </a> </li>
@@ -27,12 +35,7 @@
                             </a> </li>
                     </ul>
                 </li>
-                <li class="nav-item"> <a href="#" class="nav-link"> <i class="nav-icon bi bi-journal-bookmark"></i>
-                        <p>
-                            Pendaftar Baru
-                            <span class="nav-badge badge text-bg-primary me-3">19</span>
-                        </p>
-                    </a> </li>
+               
                 <li class="nav-item"> <a href="#" class="nav-link"> <i class="nav-icon bi bi-book-half"></i>
                         <p>
                             PPDB
@@ -69,10 +72,10 @@
                 <li class="nav-item"> <a href="#" class="nav-link"> <i class="nav-icon bi bi-gear"></i>
                         <p>Pengaturan Sekolah</p>
                     </a> </li>
-                <li class="nav-header">PESERTA</li>
-                <li class="nav-item"> <a href="#" class="nav-link"> <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                <li class="nav-header">Admin Aksess</li>
+                <li class="nav-item"> <a href="#" class="nav-link"> <i class="nav-icon bi bi-person-circle"></i>
                         <p>
-                            Auth
+                            Manajemen User
                             <i class="nav-arrow bi bi-chevron-right"></i>
                         </p>
                     </a>
@@ -85,8 +88,8 @@
                             </a> </li>
                     </ul>
                 </li>
-                <li class="nav-item"> <a href="./examples/lockscreen.html" class="nav-link"> <i class="nav-icon bi bi-circle"></i>
-                        <p>Lockscreen</p>
+                <li class="nav-item"> <a href="./examples/lockscreen.html" class="nav-link"> <i class="nav-icon bi bi-box-arrow-in-right"></i>
+                        <p>Logout</p>
                     </a> </li>
             </ul> <!--end::Sidebar Menu-->
         </nav>

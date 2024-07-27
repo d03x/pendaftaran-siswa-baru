@@ -1,3 +1,4 @@
 <x-dashboard-layout title="Google">
-    <button class="btn btn-primary">Login</button>
+    @include('dashboard.sections.statistik-ppdb')
+    @include('dashboard.sections.statistik-pencapaian-gelombang')
 </x-dashboard-layout>

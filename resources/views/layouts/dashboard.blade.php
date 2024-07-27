@@ -7,7 +7,9 @@
             <!-- begin:app-content -->
             <div class="app-content">
                 <div class="container-fluid">
-                    {{ $slot }}
+                    <div class="mt-3">
+                        {{ $slot }}
+                    </div>
                 </div>
             </div>
             <!-- end:app-content -->
