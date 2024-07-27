@@ -1,9 +1,11 @@
 import "c3/c3.min.css"
 import c3 from "c3";
 
-var chart = c3.generate({
+const chartsDuaElement = '#char2t'
+
+c3.generate({
    
-    bindto: '#char2t',
+    bindto: chartsDuaElement,
     data: {
         type : 'pie',
         columns: [

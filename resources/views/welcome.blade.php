@@ -36,4 +36,5 @@
             </div> <!-- /.login-card-body -->
         </div>
     </div> <!-- /.login-box --> <!--begin::Third Party Plugin(OverlayScrollbars)-->
+   
 </x-auth-layout>
