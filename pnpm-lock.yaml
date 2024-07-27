@@ -26,6 +26,9 @@ importers:
       d3:
         specifier: ^7.9.0
         version: 7.9.0
+      google-charts:
+        specifier: ^2.0.0
+        version: 2.0.0
       jquery:
         specifier: 3.5.0
         version: 3.5.0
@@ -787,6 +790,9 @@ packages:
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
     deprecated: Glob versions prior to v9 are no longer supported
+
+  google-charts@2.0.0:
+    resolution: {integrity: sha512-wxtwJTvA9MhFGCkMtUYtM+b1gQ8R6zSdQOxflRTAGr83+sd0bRDfrn1HaPIpxnqI75cImQBDp0ZTUXuwLhgPzA==}
 
   hasown@2.0.2:
     resolution: {integrity: sha512-0hJU9SCPvmMzIBdZFqNPXWa6dqh7WdH0cII9y+CyS8rG3nL48Bclra9HmKhVVUHyPWNH5Y7xDwAB7bfgSjkUMQ==}
@@ -1959,6 +1965,8 @@ snapshots:
       minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
+
+  google-charts@2.0.0: {}
 
   hasown@2.0.2:
     dependencies:
