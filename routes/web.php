@@ -9,6 +9,4 @@ Route::get('/', function () {
 //ini adalah bagian dashboard
 Route::prefix('dashboard')->name('dashboard.')->group(function () {
     Route::get('', [DashboardController::class,'index'])->name('index');
-    Route::get('/profile', [DashboardController::class,'index'])->name('index');
-    Route::get('/profile/google', [DashboardController::class,'index'])->name('index');
 });

@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- begin:base-head -->
     <x-base-head />
+    @yield('head')
+    @stack('head')
     <!-- end:base-head -->
 </head>
 

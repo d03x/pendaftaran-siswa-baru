@@ -4,11 +4,13 @@
         <x-dashboard.top-nav />
         <x-dashboard.sidebar />
         <main class="app-main">
-            <div class="app-content-header"> <!--begin::Container-->
+            <div class="app-content-header mb-0 p-0 pt-3 px-2"> <!--begin::Container-->
                 <div class="container-fluid"> <!--begin::Row-->
                     <div class="row">
                         <div class="col-sm-6">
-                            <h3 class="mb-0">Dashboard v2</h3>
+                            <h3 class="mb-0">
+                                {{ $pageTitle ?? config('app.name') }}
+                            </h3>
                         </div>
                         <div class="col-sm-6">
                             <x-dashboard.bread-crumb/>
