@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
+    
     /**
      * halaman dashboard
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
