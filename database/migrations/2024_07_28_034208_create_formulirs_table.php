@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('formulirs', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->foreignUuid('siswa_id')->constrained('siswas')->cascadeOnUpdate()->restrictOnDelete();
+            $table->foreignUuid('jurusan_id')->constrained('jurusans')->cascadeOnUpdate()->restrictOnDelete();
             $table->string('nik', 16)->unique();
             $table->date('tanggal_lahir');
             $table->string('tempat_lahir');
