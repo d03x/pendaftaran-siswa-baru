@@ -8,3 +8,12 @@
     stroke-width: 1px; /* Border width */
     filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2)); /* Shadow */
 }
+.noise{
+ 
+    background-image: url('../css/noise-light.png');
+    text-align: center;
+    min-height: 88vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}

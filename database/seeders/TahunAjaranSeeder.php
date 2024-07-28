@@ -34,7 +34,7 @@ class TahunAjaranSeeder extends Seeder
         ];
 
         foreach ($tahunAjaran as $tahun) {
-            TahunAjaran::createOrFirst($tahun);
+            TahunAjaran::firstOrCreate($tahun);
         }
     }
 }

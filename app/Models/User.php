@@ -42,12 +42,20 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
-protected function casts(): array
-{
-    return [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
-        'role' => Role::class
-    ];
-}
+    protected function casts(): array
+    {
+        return [
+            'email_verified_at' => 'datetime',
+            'password' => 'hashed',
+            'role' => Role::class
+        ];
+    }
+    public function isAdmin()
+    {
+        return $this->role === Role::ADMIN;
+    }
+    public function isSiswa()
+    {
+        return $this->role === Role::SISWA;
+    }
 }

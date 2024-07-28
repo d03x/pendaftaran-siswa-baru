@@ -55,17 +55,29 @@
             <!--begin::User Menu Dropdown-->
             <li class="nav-item dropdown user-menu">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                    <img src="{{ asset('images/freya3.jpg') }}" class="user-image rounded-circle border"
-                        alt="User Image" />
-                    <span class="d-none d-md-inline"> Freya Jayawardana</span>
+
+                    @if ($user?->foto)
+                        <img src="{{ $user?->foto }}" class="user-image rounded-circle border" alt="User Image" />
+                    @else
+                        <img src="{{ asset('images/freya2.jpg') }}" class="user-image rounded-circle border"
+                            alt="User Image" />
+                    @endif
+                    <span class="d-none d-md-inline">
+                        {{ $user?->name ?? '?' }}
+                    </span>
                 </a>
                 <ul class="dropdown-menu overflow-hidden dropdown-menu-lg dropdown-menu-end">
                     <!--begin::User Image-->
                     <li class="user-header text-bg-primary">
-                        <img src="{{ asset('images/freya3.jpg') }}" class="rounded-circle" alt="User Image" />
+                        @if ($user?->foto)
+                            <img src="{{ $user?->foto }}" class="rounded-circle" alt="User Image" />
+                        @else
+                            <img src="{{ asset('images/freya2.jpg') }}" class="rounded-circle" alt="User Image" />
+                        @endif
                         <p>
-                            Freya Jayawardana - (Peserta)
-                            <small>Member since Nov. 2023</small>
+
+                            {{ $user?->name }} - ({{ $user?->role }})
+                            <small>Member since {{ now()->parse($user?->created_at)->format('d-M-Y') }}</small>
                         </p>
                     </li>
                     <!--end::User Image-->
