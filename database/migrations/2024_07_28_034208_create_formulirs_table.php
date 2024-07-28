@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('formulirs', function (Blueprint $table) {
-            $table->uuid('id');
+            $table->uuid('id')->primary();
             $table->foreignUuid('siswa_id')->constrained('siswas')->cascadeOnUpdate()->restrictOnDelete();
             $table->string('nik', 16)->unique();
             $table->date('tanggal_lahir');
@@ -72,6 +72,7 @@ return new class extends Migration
             //status formulir
             $table->boolean('diverifikasi')->default(false);
             $table->timestamps();
+            $table->index(['nik','no_kk']);
         });
     }
 

@@ -19,9 +19,11 @@ return new class extends Migration
             $table->uuid('gelombang_id');
             $table->enum('status', ['dicadangkan', 'ditolak', 'diterima', 'pending'])->default('pending');
             $table->timestamps();
+
             $table->foreign('siswa_id')->references('id')->on('siswas')->cascadeOnUpdate()->restrictOnDelete();
             $table->foreign('formulir_id')->references('id')->on('formulirs')->cascadeOnUpdate()->restrictOnDelete();
             $table->foreign('gelombang_id')->references('id')->on('gelombangs')->cascadeOnUpdate()->restrictOnDelete();
+            $table->index(['status','nomor_pendaftaran']);
         });
     }
 

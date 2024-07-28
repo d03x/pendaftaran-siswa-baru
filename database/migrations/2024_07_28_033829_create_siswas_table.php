@@ -21,6 +21,7 @@ return new class extends Migration {
             $table->boolean('aktif')->default(true);
             $table->string('foto')->nullable();
             $table->timestamps();
+            $table->index(['nama','email','nisn']);
         });
     }
 
