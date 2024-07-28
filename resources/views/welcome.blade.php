@@ -26,7 +26,9 @@
                 </form>
                 <div class="social-auth-links text-center mb-3 d-grid gap-2">
                     <p>- Atau -</p>
-                    <a href="#" class="btn btn-danger"> <i class="bi bi-google me-2"></i> Sign in using Google+
+                    <a href="{{ route('auth.social',['provider'=>'github']) }}" class="btn btn-secondary"> <i class="bi bi-github me-2"></i> Sign in using GitHub
+                    </a>
+                    <a href="{{ route('auth.social',['provider'=>'google']) }}" class="btn btn-danger"> <i class="bi bi-google me-2"></i> Sign in using Google
                     </a>
                 </div> <!-- /.social-auth-links -->
                 <p class="mb-1"> <a href="forgot-password.html">I forgot my password</a> </p>

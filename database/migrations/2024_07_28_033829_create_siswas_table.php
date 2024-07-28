@@ -14,14 +14,10 @@ return new class extends Migration {
             $table->uuid('id')->primary();
             $table->string('nisn', 10)->unique();
             $table->string('no_whatsapp');
-            $table->string('nama');
-            $table->string('email');
             $table->enum('jenis_kelamin',['L','P']);
-            $table->string('password');
             $table->boolean('aktif')->default(true);
-            $table->string('foto')->nullable();
             $table->timestamps();
-            $table->index(['nama','email','nisn']);
+            $table->index(['nisn']);
         });
     }
 
