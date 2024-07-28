@@ -1,6 +1,17 @@
 <div class="row">
     <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box"> 
+            <span class="info-box-icon shadow-sm text-bg-primary"> 
+                <i class="bi bi-hand-thumbs-up-fill"></i> 
+            </span>
+            <div class="info-box-content"> 
+                <span class="info-box-text">Total Pendaftar</span> 
+                <span class="info-box-number"> 600 <small>Siswa</small> </span> 
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 col-md-3">
+        <div class="info-box"> 
             <span class="info-box-icon shadow-sm text-bg-success"> 
                 <i class="bi bi-hand-thumbs-up-fill"></i> 
             </span>
@@ -10,6 +21,7 @@
             </div>
         </div>
     </div>
+    
     <div class="col-12 col-sm-6 col-md-3">
         <div class="info-box"> 
             <span class="info-box-icon shadow-sm text-bg-danger"> 

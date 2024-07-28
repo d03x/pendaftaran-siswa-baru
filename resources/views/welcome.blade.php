@@ -1,4 +1,5 @@
 <x-auth-layout bodyClass="login-page bg-body-secondary">
+    
     <div class="login-box rounded overflow-hidden">
         <div class="login-logo"> <a href="#"><b>Admin</b>LTE</a> </div> <!-- /.login-logo -->
         <div class="card card-outline card-info">

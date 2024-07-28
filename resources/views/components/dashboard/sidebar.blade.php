@@ -111,6 +111,7 @@
                         </li>
                     </ul>
                 </li>
+                <x-nav-item icon="bi bi-bar-chart" href="{{ url('statistik') }}">Statistik</x-nav-item>
                 <li class="nav-header">Admin Aksess</li>
                 <x-nav-item icon="bi bi-gear" href="{{ url('pengaturan') }}">Pengaturan Sekolah</x-nav-item>
                 <li class="nav-item">

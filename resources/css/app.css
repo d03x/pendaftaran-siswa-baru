@@ -2,3 +2,9 @@
 @import url('./adminlte.css');
 @tailwind components;
 @tailwind utilities;
+
+.c3-bar {
+    stroke: #000; /* Border color */
+    stroke-width: 1px; /* Border width */
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2)); /* Shadow */
+}
