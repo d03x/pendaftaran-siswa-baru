@@ -1,7 +1,7 @@
 @props([
     'href' => null,
-    "icon" => 'bi bi-speedometer',
-    
+    "icon" => 'bi bi-circle',
+
 ])
 <li class="nav-item">
     <a href="{{ $href }}" class="nav-link {{ request()->fullUrlIs($href) ? 'active' : '' }}">

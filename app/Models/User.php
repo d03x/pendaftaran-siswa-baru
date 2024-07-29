@@ -54,8 +54,20 @@ class User extends Authenticatable
     {
         return $this->role === Role::ADMIN;
     }
+    public function foto(){
+        return $this->foto;
+    }
     public function isSiswa()
     {
         return $this->role === Role::SISWA;
     }
+
+    public function role(){
+        return match ($this->role) {
+            Role::ADMIN => 'admin',
+            Role::SISWA => 'siswa',
+            Role::PANITIA => 'panitia'
+        };
+    }
+
 }

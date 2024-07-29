@@ -17,4 +17,8 @@ Route::get('logout',fn()=>Auth::logout());
 //ini adalah bagian dashboard
 Route::prefix('dashboard')->middleware(['role'])->name('dashboard.')->group(function () {
     Route::get('', [DashboardController::class, 'index'])->name('index');
+    Route::middleware('role:siswa')->group(function(){
+        Route::get('biodata',[\App\Http\Controllers\BiodataSiswaController::class,'index'])->name('biodata-siswa') ;
+        Route::get('biodata/review',[\App\Http\Controllers\BiodataSiswaController::class,'index'])->name('biodata-siswa-review') ;
+    });
 });

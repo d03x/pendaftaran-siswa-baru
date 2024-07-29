@@ -1,43 +1,14 @@
 <ul class="nav sidebar-menu flex-column" data-lte-toggle="treeview" role="menu" data-accordion="false">
     <li class="nav-header">.::Menu Siswa::.</li>
     <x-nav-item icon="bi bi-speedometer" href="{{ route('dashboard.index') }}">Dashboard</x-nav-item>
-
-    <li class="nav-item">
-        <a href="#" class="nav-link">
-            <i class="nav-icon bi bi-input-cursor-text"></i>
-            <p>
-                Formulir
-                <i class="nav-arrow bi bi-chevron-right"></i>
-            </p>
-        </a>
-        <ul class="nav nav-treeview">
-            <li class="nav-item">
-                <a href="./examples/login-v2.html" class="nav-link">
-                    <i class="nav-icon bi bi-circle"></i>
-                    <p>Bidata Siswa</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="./examples/register-v2.html" class="nav-link">
-                    <i class="nav-icon bi bi-circle"></i>
-                    <p>Biodata Orang Tua / Wali</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="./examples/register-v2.html" class="nav-link">
-                    <i class="nav-icon bi bi-circle"></i>
-                    <p>Nilai Rapot</p>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="./examples/register-v2.html" class="nav-link">
-                    <i class="nav-icon bi bi-circle"></i>
-                    <p>Upload Berkas</p>
-                </a>
-            </li>
-        </ul>
-    </li>    
-     
+    <!-- begin:treeview formulir -->
+    <x-nav-treeview label="Formulir" icon="bi bi-input-cursor-text">
+        <x-nav-item href="{{route('dashboard.biodata-siswa')}}">Biodata</x-nav-item>
+        <x-nav-item href="">Biodata Orang Tua</x-nav-item>
+        <x-nav-item href="">Nilai Rapot</x-nav-item>
+        <x-nav-item href="">Upload Berkas</x-nav-item>
+    </x-nav-treeview>
+    <!-- end:treeview formulir -->
     <x-nav-item icon="bi bi-bell" href="{{ url('dashboard/app') }}">
         <span>Pengumuman</span>
         <span class="nav-badge badge text-bg-primary me-3">19</span>

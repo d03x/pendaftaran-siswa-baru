@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Enums\Role;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -20,7 +21,7 @@ class RoleMiddleware
             return redirect(route('login'));
         }
         if (!empty($roles) && is_array($roles)) {
-            $role = $request->user()?->role;
+            $role = $request->user()?->role();
             if (!in_array($role, $roles)) {
                 abort(403);
             }

@@ -27,7 +27,6 @@ class SocialLoginController extends Controller
     /**
      * callback from oauth provider
      * @param \Illuminate\Http\Request $request
-     * @param \App\Http\Controllers\Services\LoginService $loginService
      * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
      */
     public function callback(Request $request, UserServices $loginService): RedirectResponse|Redirector
@@ -37,12 +36,12 @@ class SocialLoginController extends Controller
             //ambil data user yang di kirim dari oauth server
             $user = Socialite::driver($request->get('from'))->user();
             $userDto = new UserDto(
-                foto: $user->avatar,
-                token: $user->token,
                 name: $user->name,
-                remember_me: $request->boolean('remember_me'),
                 email: $user->email,
                 password: uniqid(),
+                foto: $user->avatar,
+                token: $user->token,
+                remember_me: $request->boolean('remember_me'),
             );
             //cek apakah user nya sudah terdaftar apa belum
             $cekUser = User::where('email', $user->email)->first();
