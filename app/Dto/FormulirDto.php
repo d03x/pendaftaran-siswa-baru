@@ -1,0 +1,61 @@
+<?php
+
+namespace App\Dto;
+
+class FormulirDto extends SiswaDto
+{
+    public function __construct(
+        public ?string $id = null,
+        public ?string $siswa_id = null,
+        public ?string $jurusan_id = null,
+        public ?string $nik = null,
+        public ?string $tanggal_lahir = null,
+        public ?string $tempat_lahir = null,
+        public ?string $no_kk = null,
+        public ?string $agama = null,
+        public ?string $jumlah_saudara = null,
+        public ?int $anak_ke = null,
+        public ?string $hobi = null,
+        public ?string $cita_cita = null,
+        public ?string $sekolah_asal_id = null,
+        public ?string $nama_ayah = null,
+        public ?string $status_ayah = null,
+        public ?string $nik_ayah = null,
+        public ?string $tempat_lahir_ayah = null,
+        public ?string $tgl_lahir_ayah = null,
+        public ?string $pendidikan_ayah = null,
+        public ?string $pekerjaan_ayah = null,
+        public ?int $penghasilan_ayah = null,
+        public ?string $no_hp_ayah = null,
+        public ?string $nama_ibu = null,
+        public ?string $status_ibu = null,
+        public ?string $nik_ibu = null,
+        public ?string $tempat_lahir_ibu = null,
+        public ?string $tgl_lahir_ibu = null,
+        public ?string $pendidikan_ibu = null,
+        public ?string $pekerjaan_ibu = null,
+        public ?int $penghasilan_ibu = null,
+        public ?string $no_hp_ibu = null,
+        public ?string $nama_wali = null,
+        public ?string $nik_wali = null,
+        public ?string $tempat_lahir_wali = null,
+        public ?string $tgl_lahir_wali = null,
+        public ?string $pendidikan_wali = null,
+        public ?string $pekerjaan_wali = null,
+        public ?int $penghasilan_wali = null,
+        public ?string $no_hp_wali = null,
+        public ?string $status_rumah = null,
+        public ?string $tinggal_sama = null,
+        public ?string $alamat = null,
+        public ?string $rt = null,
+        public ?string $rw = null,
+        public ?string $kel = null,
+        public ?string $kec = null,
+        public ?string $kab_kota = null,
+        public ?string $provinsi = null,
+        public ?string $kode_pos = null,
+        public ?string $tinggal_dengan = null,
+        public ?bool $diverifikasi = false
+    ) {
+    }
+}

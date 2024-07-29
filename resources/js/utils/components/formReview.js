@@ -1,4 +1,5 @@
 import { parseInputName } from "../../utils";
+import echo from "../echo";
 
 /**
  * Generates a table row for the given input name and value.
@@ -62,5 +63,4 @@ function formReview(selector, excepts, config) {
         return reviewHTML;
     }
 }
-
 export { formReview };

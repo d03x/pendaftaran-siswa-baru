@@ -10,6 +10,7 @@
              'type' => 'text',
              'name' => 'nama',
              'label' => 'Nama',
+             'value' => auth()->user()->name,
          ],
          [
              'type' => 'text',
@@ -40,7 +41,7 @@
                     'Kristen',
                     'Hindu',
                     'Budha',
-                    
+
                 ]
             ],
          [
@@ -88,16 +89,15 @@
         </div>
         <div class="card-body">
             <form id="form-biodata-siswa" action="" method="POST" >
-                @csrf
-                @method("POST")
+
                 <div class="tw-grid gap-3 tw-grid-cols-1 md:tw-grid-cols-2">
                     @foreach($form as $item)
                         <div class="form-group tw-justify-end md:tw-flex tw-items-center tw-gap-3">
                             <label class="tw-whitespace-nowrap tw-font-semibold tw-text-sm" for="{{$item['name']}}">{{$item['label']}}:</label>
                             @if($item['type'] !== 'select')
-                                <input placeholder="{{$item['label']}}" name="{{$item['name']}}" type="{{$item['type']}}"  class="form-control md:tw-w-96 ">
+                                <input value="{{$item['value'] ?? ''}}" required="true" placeholder="{{$item['label']}}" name="{{$item['name']}}" type="{{$item['type']}}"  class="form-control md:tw-w-96 ">
                                 @else
-                                <select class="form-control form-select md:tw-w-96" name="{{$item['name']}}">
+                                <select required class="form-control form-select md:tw-w-96" name="{{$item['name']}}">
                                     @foreach($item['options'] as $value)
                                         <option value="{{$value}}">{{$value}}</option>
                                     @endforeach
@@ -105,6 +105,23 @@
                             @endif
                         </div>
                     @endforeach
+                </div>
+                <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="reviewModalLabel">Review</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" modal-review-content>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit"  class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="tw-flex tw-mt-4 gap-2 float-end">
                     <button type="button" data-btn="review-biodata-siswa" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reviewModal">
