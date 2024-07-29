@@ -25,9 +25,7 @@ function generateTableRow(name, value) {
  * @returns
  */
 const generateReviewTable = (formElement, excepts) => {
-    const inputs = formElement.querySelectorAll("input");
-    const selects = formElement.querySelectorAll("select");
-    const textarea = formElement.querySelectorAll("textarea");
+    const inputs = formElement.querySelectorAll("input, select, textarea");
 
     let data = "<table>";
     inputs.forEach((input) => {
@@ -36,11 +34,7 @@ const generateReviewTable = (formElement, excepts) => {
 
         }
     });
-    selects.forEach((input) => {
-        if (!excepts.includes(input.name)) {
-            data += generateTableRow(input.name, input.value);
-        }
-    });
+    
     data += "</table>";
     return data;
 };
