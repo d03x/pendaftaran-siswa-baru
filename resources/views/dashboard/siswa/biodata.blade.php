@@ -32,10 +32,17 @@
              'label' => 'No KK',
          ],
          [
-             'type' => 'text',
+             'type' => 'select',
              'name' => 'agama',
              'label' => 'Agama',
-         ],
+                'options' => [
+                    'Islam',
+                    'Kristen',
+                    'Hindu',
+                    'Budha',
+                    
+                ]
+            ],
          [
              'type' => 'number',
              'name' => 'jumlah_saudara',
@@ -53,13 +60,13 @@
              'options' => ['Membaca', 'Menulis', 'Bersepeda', 'Memasak', 'Olahraga', 'Musik'],
          ],
          [
-             'type' => 'text',
+             'type' => 'select',
              'name' => 'cita_cita',
              'label' => 'Cita-cita',
              'options' => ['Dokter', 'Guru', 'Insinyur', 'Pengusaha', 'Pilot', 'Polisi'],
          ],
 
-             ['type' => 'text',
+             ['type' => 'select',
              'name' => 'alamat_rumah',
              'label' => 'Alamat Rumah',
              'options' => ['Dokter', 'Guru', 'Insinyur', 'Pengusaha', 'Pilot', 'Polisi'
@@ -74,7 +81,7 @@
                 <div class="tw-text-sm tw-flex tw-items-center tw-justify-start gap-2">
                     <b>Lengkap: </b> <span>
                         <i class="bi bi-x-circle-fill text-danger"></i>
-{{--                        <i class="bi bi-check-circle-fill text-success"></i>--}}
+                        {{--                        <i class="bi bi-check-circle-fill text-success"></i>--}}
                     </span>
                 </div>
             </div>
@@ -99,10 +106,6 @@
                         </div>
                     @endforeach
                 </div>
-
-
-
-
                 <div class="tw-flex tw-mt-4 gap-2 float-end">
                     <button type="button" data-btn="review-biodata-siswa" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reviewModal">
                         SIMPAN
